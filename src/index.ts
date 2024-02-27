@@ -1,8 +1,9 @@
 import "./core/load-env";
-import express, { Express, Request, Response } from "express";
+import  {  Request, Response } from "express";
 import { envConstants } from "./core/constants";
+import { createRestApiServer } from "./core/servers";
 
-const app: Express = express();
+const app = createRestApiServer();
 const port = envConstants.PORT || 3000;
 
 app.get("/", (req: Request, res: Response) => {
