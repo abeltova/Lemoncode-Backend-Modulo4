@@ -1,6 +1,9 @@
-import "./core/load-env";
-import { envConstants } from "./core/constants";
-import { createRestApiServer } from "./core/servers";
+import "module-alias/register"
+
+import "@core/load-env"
+import { envConstants } from "@core/constants";
+import { createRestApiServer } from "@core/servers";
+import { housesApi } from "@pods/house";
 
 const app = createRestApiServer();
 const port = envConstants.PORT || 3000;
